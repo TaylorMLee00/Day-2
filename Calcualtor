@@ -1,1 +1,16 @@
 
+a = float(input("First number: "))
+op = input("Operator (+ - * /): ")
+b = float(input("Second number: "))
+
+if op == "+":
+    print("Result:", a + b)
+elif op == "-":
+    print("Result:", a - b)
+elif op == "*":
+    print("Result:", a * b)
+elif op == "/":
+    print("Result:", "Error (divide by 0)" if b == 0 else a / b)
+else:
+    print("Invalid operator")
+#This is completed at August 26, 2026 18:18 CST
