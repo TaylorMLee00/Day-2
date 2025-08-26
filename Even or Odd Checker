@@ -1,0 +1,15 @@
+# Day 2: Even or Odd Checker
+
+def even_or_odd(n: int) -> str:
+    """Return 'Even' or 'Odd' for the given integer."""
+    return "Even" if n % 2 == 0 else "Odd"
+
+
+if __name__ == "__main__":
+    raw = input("Enter a whole number: ").strip()
+    try:
+        n = int(raw)
+        print(even_or_odd(n))
+    except ValueError:
+        print("Please enter a valid whole number (e.g., -3, 0, 7).")
+#This was completed on August 26, 2025 18:26 CST
