@@ -1,16 +1,26 @@
+# Day 2: Simple Calculator
 
-a = float(input("First number: "))
-op = input("Operator (+ - * /): ")
-b = float(input("Second number: "))
+def calculate(a: float, b: float, op: str):
+    """Perform basic arithmetic based on the operator."""
+    if op == "+":
+        return a + b
+    elif op == "-":
+        return a - b
+    elif op == "*":
+        return a * b
+    elif op == "/":
+        return "Error: Cannot divide by zero" if b == 0 else a / b
+    else:
+        return "Invalid operator"
 
-if op == "+":
-    print("Result:", a + b)
-elif op == "-":
-    print("Result:", a - b)
-elif op == "*":
-    print("Result:", a * b)
-elif op == "/":
-    print("Result:", "Error (divide by 0)" if b == 0 else a / b)
-else:
-    print("Invalid operator")
+
+if __name__ == "__main__":
+    try:
+        a = float(input("First number: "))
+        op = input("Operator (+ - * /): ").strip()
+        b = float(input("Second number: "))
+        print("Result:", calculate(a, b, op))
+    except ValueError:
+        print("Please enter valid numbers.")
+
 #This is completed at August 26, 2026 18:18 CST
