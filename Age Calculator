@@ -1,0 +1,14 @@
+# Day 2: Age Calculator
+
+from datetime import datetime
+
+# Get the current year automatically
+current_year = datetime.now().year
+
+try:
+    birth_year = int(input("What year were you born? "))
+    age = current_year - birth_year
+    print(f"You are {age} years old in {current_year}.")
+except ValueError:
+    print("Please enter a valid year (e.g., 1998).")
+#Completed August 26, 2025 19:03
